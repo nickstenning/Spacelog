@@ -7,12 +7,9 @@ from backend.api import Glossary
 from backend.util import timestamp_to_seconds
 from transcripts.templatetags.missiontime import timestamp_to_url
 
-from templatetag_sugar.register import tag
-from templatetag_sugar.parser import Variable, Optional
-
 register = Library()
 
-@tag(register, [Variable(), Variable()])
+@register.simple_tag(takes_context=True)
 def original_link(context, transcript, page):
     url_args = {
         'page': page,
