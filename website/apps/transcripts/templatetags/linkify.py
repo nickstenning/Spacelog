@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.utils.safestring import mark_safe
 from backend.api import Glossary
 from backend.util import timestamp_to_seconds
-from transcripts.templatetags.missiontime import timestamp_to_url
+from .missiontime import timestamp_to_url
 
 register = Library()
 
